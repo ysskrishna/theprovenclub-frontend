@@ -151,7 +151,7 @@ const Home = () => {
     <div>
       <h1>Library</h1>
       
-      <div class="max-w-2xl mx-auto">
+      <div>
 
 	    <label for="members" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select a member</label>
       <select id="members" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" onChange={e=> setSelectedMember(e.target.value)}>
@@ -163,10 +163,10 @@ const Home = () => {
         })}
     </select>
 
-
+    <label for="date" class="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Select date</label>
       <input type="date" id="date" name="trip-start" value={selectedDate} onChange={(e)=> setSelectedDate(e.target.value)} min={todayDate} />
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
       {
       books?.map((book, index) => {
         return ( 
